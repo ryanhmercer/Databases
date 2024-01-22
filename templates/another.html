@@ -1,0 +1,49 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Admin View</h1>
+  <p>Welcome {{name}}!</p>
+
+  <p>Click one of the options below:</p>
+
+<form method="POST" action="/rec">
+<p>
+   <input type="submit" value="Find Patient Recommendation"> </p>
+</form>
+
+<form method="POST" action="/addemp">
+<p>
+   <input type="submit" value="Add Employee"> </p>
+</form>
+
+<form method="POST" action="/delemp">
+<p>
+   <input type="submit" value="Delete Employee"> </p>
+</form>
+
+<form method="POST" action="/viewres">
+<p>
+   <input type="submit" value="View Hospital Resources"> </p>
+</form>
+
+<form method="POST" action="/changeres">
+<p>
+   <input type="submit" value="Change Hospital Resources"> </p>
+</form>
+
+
+<form method="POST" action="/logout">
+<p>
+   <input type="submit" value="Logout"> </p>
+</form>
+
+</body>
+
+</html>

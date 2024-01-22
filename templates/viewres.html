@@ -1,0 +1,46 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>View Hospital Resources</h1>
+  <p>Please select the hospital and resource type to view availability:</p>
+
+<form method="POST" action="/viewres_submit">
+    <p>Hospital: <select id="hospital" name="hospital" required/>
+        <option value="1468 Madison Ave, New York, NY 10029">Mount Sinai (Madison Ave)</option>
+        <option value="506 Lenox Ave, New York, NY 10037">NYC Health + Hospitals/Harlem</option>
+        <option value="520 E 70th St, New York, NY 10021">New York Presbyterian Hospital (70th Street)</option>
+        <option value="2025 Broadway, New York, NY 10023">CityMD West 69th Urgent Care - NYC</option>
+        <option value="205 Lexington Ave, New York, NY 10016">Midtown New York Doctors Urgent Care</option>
+        <option value="419 W 114th St, New York, NY 10025">Mount Sinai Morningside</option>
+        <option value="424 E 34th St, New York, NY 10016">NYU Langone Health</option>
+        <option value="100 E 77th St, New York, NY 10075">Lenox Hill Hospital</option>
+        <option value="641 Lexington Ave, New York, NY 10022">Northwell Hospital</option>
+        <option value="1000 10th Ave, New York, NY 10019">Mount Sinai (West)</option>
+    </select> <br> </p>
+     <p>Resource Type: <select id="res" name="res"required/>
+        <option value="Bed">Bed</option>
+        <option value="X-ray">X-ray</option>
+        <option value="Anesthesia">Anesthesia</option>
+        <option value="Surgical Instruments">Surgical Instruments</option>
+        <option value="MRI">MRI</option>
+    </select> <br> </p>
+    <input type="submit" value="Submit">
+</form>
+
+<form method="POST" action="/back">
+<p>
+   <input type="submit" value="Back"> </p>
+</form>
+
+<p>{{str}}</p>
+
+</body>
+
+</html>

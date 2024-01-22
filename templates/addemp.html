@@ -1,0 +1,46 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Adding Employee</h1>
+  <p>Please input the following information to add a new employee to your hospital</p>
+
+<form method="POST" action="/addemp_submit">
+  <p>First Name: <input type="text" name="fname"required/> <br>
+    <p>Last Name: <input type="text" name="lname"required/> <br>
+    <p>Doctor?: <select id="doc" name="doc"required/>
+        <option value="T">True</option>
+        <option value="F">False</option>
+    </select> <br> </p>
+    <p>If Doctor, select specialization: <select id="spec" name="spec" required/>
+        <option value="None">None</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Psychiatry">Psychiatry</option>
+    </select> <br>  </p>
+    <p>Admin?:<select id="admin" name="admin"required/>
+        <option value="T">True</option>
+        <option value="F">False</option>
+    </select> <br> </p>
+    <input type="submit" value="Submit">
+</form>
+
+<form method="POST" action="/back">
+<p>
+   <input type="submit" value="Back"> </p>
+</form>
+
+<p>{{str}}</p>
+
+</body>
+
+</html>

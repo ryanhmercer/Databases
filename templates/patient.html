@@ -1,0 +1,67 @@
+
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+    table, th, td {
+        border: 3px solid black;
+    }
+  </style>
+
+
+<body>
+  <h1>Hospital Recommendation</h1>
+  <p>Please input the following information to get a recommendation</p>
+
+
+<form method="POST" action="/rec_submit">
+    <p>First Name: <input type="text" name="fname"> <br>
+    <p>Last Name: <input type="text" name="lname"> <br>
+    <p>Age:<input type="number" name="age"  min="0" max ="200" step="1"  required/>
+    <p>SSN:<input type="text" name="ssn" maxlength="9"  min="0" max="999999999" step="1" pattern="[0-9]{9}" required/> <br>
+    <p>Address:<input type="text" name="addr"> <br>
+    <p>Ailment:
+    <select id="ailment" name="ailment">
+        <option value="High Blood Pressure">High Blood Pressure</option>
+        <option value="High Cholesterol">High Cholesterol</option>
+        <option value="Rheumatoid Arthritis">Rheumatoid Arthritis</option>
+        <option value="Alzheimer’s Disease">Alzheimer's Disease</option>
+        <option value="Eczema">Eczema</option>
+        <option value="Childhood Fever">Childhood Fever</option>
+        <option value="Anxiety">Anxiety</option>
+        <option value="Ankle Fracture">Ankle Fracture</option>
+        <option value="Parkinson’s Disease">Parkinson's Disease</option>
+        <option value="Scoliosis">Scoliosis</option>
+    </select> <br>
+    <input type="submit" value="Submit"></p>
+</form>
+
+<form method="POST" action="/back">
+<p>
+   <input type="submit" value="Back"> </p>
+</form>
+
+<p>{{str}}</p>
+
+{%if has_rec %}
+<table>
+    <tr>
+        <td><b><center>Address</center></b></td>
+        <td><b><center>Name</center></b></td>
+        <td><b><center>Distance (mi)</center></b></td>
+    </tr>
+    {% for n in data %}
+    <tr>
+        {% for m in n %}
+        <td> {{m}} </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+</body>
+
+</html>

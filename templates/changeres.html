@@ -1,0 +1,35 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Change Hospital Resources</h1>
+  <p>Please select resource type and new number of resource to input in the database:</p>
+
+<form method="POST" action="/changeres_submit">
+     <p>Resource Type: <select id="res" name="res">
+        <option value="Bed">Bed</option>
+        <option value="X-Ray">X-Ray</option>
+        <option value="Anesthesia">Anesthesia</option>
+        <option value="Surgical Instruments">Surgical Instruments</option>
+        <option value="MRI">MRI</option>
+    </select> <br>
+    <p>Number:<input type="number" name="num"  min="0" max ="999999999" step="1"  required/>
+    <input type="submit" value="Submit"></p>
+</form>
+
+<form method="POST" action="/back">
+<p>
+   <input type="submit" value="Back"> </p>
+</form>
+
+<p>{{str}}</p>
+
+</body>
+
+</html>
